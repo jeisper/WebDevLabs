@@ -1,0 +1,37 @@
+.container {
+    display: flex; 
+    flex-wrap: wrap;
+  }
+  
+  .grid {
+    flex-grow: 0.5;
+    flex-direction: column;
+    border: 1px solid;
+    background-color: yellowgreen;
+
+  }
+  .grid2 {
+    flex-grow: 0.5;
+    border: 1px solid;
+    background-color: yellowgreen;
+
+  }
+  
+  @media (max-width: 720px) {
+    .grid {
+      width: calc(50% - 5px)
+    }
+    .grid2 {
+        width: calc(50% - 5px)
+      }
+  }
+  
+  @media (max-width: 360px) {
+    .grid {
+      width: calc(100% - 5px)
+    }
+    .grid2 {
+        width: calc(50% - 5px)
+      }
+  }
+
