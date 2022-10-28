@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style/style.css">
     <title>Phone Note</title>
 </head>
 
@@ -13,12 +14,33 @@
         <h1>Phone Note</h1>
         <div id="mainDiv">
             <form>
-                <input type="text" name="name" id="name" />
-                <input type="tel" name="mobile" id="mobile" />
-                <input type="email" name="email" id="email" />
-                <button type="submit" id="addContactButton">Add</button>
+                <input type="text" name="name" id="name" placeholder="Name" required />
+                <input type="tel" name="mobile" id="mobile" placeholder="Phone Number" pattern="[[0-9]{10}" required />
+                <input type="email" name="email" id="email" placeholder="Email" required />
+                <button type="submit" id="addContactButton">Add Contact Info</button>
+
+                <div id="error"></div>
+                <div>
+                    <div>
+                        Form requirements
+                    </div>
+                    <ul>
+                        <li>
+                            Name: Should contain only Alphabets and Space. Should be less than or equal
+                            to 20 characters in length.
+                        </li>
+                        <li>
+                            Mobile: Should contain only Numbers. Should be equal to 10 characters in
+                            length.
+                        </li>
+                        <li>
+                            Email: Should have a proper validation and should be less than 40 characters in
+                            length.
+                        </li>
+                    </ul>
+                </div>
+
             </form>
-            <div id="error"></div>
 
             <div id="seachByPhoneN">
                 <div id="searchText">
@@ -29,8 +51,8 @@
             </div>
         </div>
     </header>
-    <main>
-        <table>
+    <div>
+        <table id="mainTable">
             <div>Contact Summary
             </div>
             <tr>
@@ -39,10 +61,8 @@
                 <th>Email</th>
             </tr>
         </table>
-    </main>
-    <main>
-
-    </main>
+    </div>
+    <script src="./assets/script/index.js"></script>
 </body>
 
 </html>
