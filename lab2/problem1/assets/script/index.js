@@ -4,11 +4,9 @@ const phoneNumberCheck = document.getElementById("mobile");
 const addButton = document.getElementById("addContactButton");
 const errorDiv = document.getElementById("error");
 const mainTable = document.getElementById("mainTable");
+const seachInput = document.getElementById("seachInput");
 
 let info = [];
-let validEmail = false;
-let validPhone = false;
-let validName = false;
 
 let nameRegex = /^[a-zA-Z][a-zA-Z ]*$/;
 let emailRegex =

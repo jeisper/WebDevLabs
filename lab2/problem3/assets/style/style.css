@@ -42,7 +42,7 @@ margin: 30px;
 }
 
 .profileInfo{
-    display: flex;
+display: flex;
 border: 1px solid aliceblue;
 border-radius: 10px;
 margin: 5px;

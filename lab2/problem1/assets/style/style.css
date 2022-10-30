@@ -2,3 +2,82 @@ body{
     background-color: black;
     color: aliceblue;
 }
+
+#reque-header{
+margin-left: 30px;    
+font-size: 30px;
+}
+
+li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#form-box{
+    display: flex;
+    flex-direction: row;
+} 
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    width: 300px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#addContactButton{
+    width: 325px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#error{
+    font-size: 30px;
+    color: red;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#seachByPhoneN{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+}
+
+#searchText{
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+#mainDiv, #mainTable, #table-header{
+    margin-left: 30px;
+}
+
+#table-header{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+tr, th, td {
+    margin: 20px;
+    border: 1px solid aliceblue;
+    padding: 10px;
+    text-align: center;
+}
+
+th{
+    width: 400px;
+    margin: 10px;
+}
+
+
+
