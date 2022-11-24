@@ -1,0 +1,116 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-color: #000;
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background: rgb(163, 27, 111);
+  color: white;
+}
+
+header h1 {
+  margin-left: 20px;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 15px;
+  overflow: hidden;
+}
+
+.choosenColour {
+  display: flex;
+}
+
+.colours {
+  width: 30px;
+  height: 30px;
+  margin: 10px 0;
+  margin-right: 10px;
+  border-radius: 5px;
+  background: #000;
+  border: 1px solid black;
+}
+
+#todoTextArea {
+  border: 1px white solid;
+  margin: 10px 0;
+  background-color: #000;
+  color: white;
+  border-radius: 10px;
+  width: 90%;
+  height: 80px;
+  padding: 10px;
+}
+
+.pink {
+  background: rgb(163, 27, 111);
+}
+
+.babyBlue {
+  background-color: rgb(12, 217, 244);
+}
+
+#listOfTodos {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.todo {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  justify-content: space-between;
+  border: 1px white solid;
+  color: white;
+  width: 180px;
+  min-height: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.todo p {
+  margin: 10px 10px;
+}
+
+#addText { 
+  padding: 10px;
+  color: white;
+  background-color:  rgb(12, 217, 244);
+  border: 1px white solid;
+  border-radius: 10px;
+  font-size: 25px;
+}
+
+.buttonDiv {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.deleteButton{
+  padding: 3px;
+  border: 1px white solid;
+  border-radius: 5px;
+}
+
+.updateButton{
+  padding: 3px;
+  border: 1px white solid;
+  border-radius: 5px;
+}
