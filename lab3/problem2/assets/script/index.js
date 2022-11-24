@@ -15,8 +15,9 @@ const getStartValue = () => {
 const getTimeFromSeconds = (totalSeconds) => {
   const hour = Math.floor(totalSeconds / (60 * 60));
   const min = Math.floor(totalSeconds / 60) % 60;
+  const second = Math.floor(totalSeconds % 60);
 
-  return { hour, min };
+  return { hour, min, second };
 };
 
 const startObservable = fromEvent(start, "click");
@@ -40,6 +41,11 @@ const subscription = startObservable.subscribe(() => {
     const time = getTimeFromSeconds(startValue - x);
 
     result.innerHTML =
-      time.hour + "hours " + (time.min == 60 ? 0 : time.min) + " mins ";
+      time.hour +
+      "hours " +
+      (time.min == 60 ? 0 : time.min) +
+      " mins " +
+      time.second +
+      "s";
   });
 });

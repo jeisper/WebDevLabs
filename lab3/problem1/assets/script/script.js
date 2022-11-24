@@ -1,3 +1,5 @@
+const { fromEvent, interval, merge, EMPTY } = rxjs;
+
 const deleteButton = document.querySelectorAll(".deleteButton");
 const updateButton = document.querySelectorAll(".updateButton");
 const addText = document.getElementById("addText");
@@ -9,13 +11,17 @@ const codeOfColours = ["rgb(163, 27, 111)", "rgb(12, 217, 244)"];
 let colourSelected = 0;
 let todos = [];
 
+const addTextObv = fromEvent(addText, "click");
+const updateTodosObv = fromEvent(updateButton, "click");
+const deleteTodosObv = fromEvent(deleteButton, "click");
+
 for (let i = 0; i < colourBox.length; i++) {
   colourBox[i].addEventListener("click", (event) => {
     colourSelected = i;
   });
 }
 
-addText.addEventListener("click", () => {
+const addTextSub = addTextObv.subscribe((event) => {
   if (todoTextArea.value === "") {
     return;
   } else {
@@ -52,5 +58,3 @@ function deleteTodo(pos) {
   todos = [...list];
   refreshTodos();
 }
-
-function updateTodo(pos) {}
